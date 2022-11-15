@@ -53,13 +53,13 @@ lspconfig.sumneko_lua.setup {
     },
 }
 
-local servers = { "gopls", "tsserver", "graphql", "svelte" }
+local servers = { 'gopls', 'tsserver', 'graphql', 'svelte' }
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup({
-    on_attach = M.on_attach,
-    capabilities = M.capabilities,
-  })
+    lspconfig[lsp].setup({
+        on_attach = M.on_attach,
+        capabilities = M.capabilities,
+    })
 end
 
 return M

@@ -129,6 +129,13 @@ if present then
             end,
         }
 
+        use {
+            'jose-elias-alvarez/null-ls.nvim',
+            config = function()
+                require('plugins.configs.null-ls')
+            end,
+        }
+
         -- load luasnips + cmp related in insert mode only
         use {
             'rafamadriz/friendly-snippets',
