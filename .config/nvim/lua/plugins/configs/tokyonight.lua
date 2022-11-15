@@ -15,6 +15,7 @@ tokyonight.setup({
         hl.DiagnosticVirtualTextWarn = { bg = 'NONE', fg = c.yellow }
         hl.DiagnosticVirtualTextInfo = { bg = 'NONE', fg = c.blue2 }
         hl.DiagnosticVirtualTextHint = { bg = 'NONE', fg = c.teal }
+        hl.LspSagaFinderSelection = { fg = c.red }
     end,
 })
 

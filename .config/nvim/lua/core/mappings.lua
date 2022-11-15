@@ -67,15 +67,6 @@ vim.keymap.set(
 
 vim.keymap.set(
     'n',
-    'gr',
-    function()
-        vim.lsp.buf.references()
-    end,
-    { silent = true }
-)
-
-vim.keymap.set(
-    'n',
     '<leader>f',
     function()
         vim.diagnostic.open_float()
