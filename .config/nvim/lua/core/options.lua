@@ -18,7 +18,7 @@ opt.fillchars = { eob = ' ' }
 opt.ignorecase = true
 opt.smartcase = true
 opt.scrolloff = 8
-opt.mouse = 'a'
+opt.mouse = ''
 
 -- Numbers
 opt.relativenumber = true

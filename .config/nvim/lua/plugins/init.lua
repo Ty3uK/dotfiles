@@ -136,6 +136,14 @@ if present then
             end,
         }
 
+        use {
+            'simrat39/rust-tools.nvim',
+            after = 'nvim-lspconfig',
+            config = function()
+                require('plugins.configs.rust')
+            end,
+        }
+
         -- load luasnips + cmp related in insert mode only
         use {
             'rafamadriz/friendly-snippets',
