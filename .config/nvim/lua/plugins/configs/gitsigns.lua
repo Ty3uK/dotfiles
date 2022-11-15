@@ -16,3 +16,8 @@ gitsigns.setup({
         -- utils.load_mappings('gitsigns', { buffer = bufnr })
     end
 })
+
+vim.api.nvim_set_hl(0, 'DiffAdd', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'DiffChange', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'DiffDelete', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'DiffChangeDelete', { bg = 'NONE' })

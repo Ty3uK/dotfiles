@@ -1,6 +1,7 @@
--- Navigation between buffers
+-- Buffers
 vim.keymap.set('n', '<Tab>', '<cmd>:BufferLineCycleNext<cr>', { silent = true })
 vim.keymap.set('n', '<S-Tab>', '<cmd>:BufferLineCyclePrev<cr>', { silent = true })
+vim.keymap.set('n', '<leader>x', '<cmd>:bdelete<cr>', { silent = true })
 
 -- LSP
 vim.keymap.set(
@@ -113,3 +114,4 @@ vim.keymap.set('n', '<leader>fw', '<cmd>Telescope live_grep<cr>', { silent = tru
 
 -- Git
 vim.keymap.set('n', '<leader>gt', '<cmd>LazyGit<cr>', { silent = true })
+vim.keymap.set('n', '<leader>gb', '<cmd>Gitsigns blame_line<cr>', { silent = true })
