@@ -53,7 +53,7 @@ lspconfig.sumneko_lua.setup {
     },
 }
 
-local servers = { 'gopls', 'tsserver', 'graphql', 'svelte' }
+local servers = { 'gopls', 'tsserver', 'cssls', 'sourcekit' }
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup({
@@ -61,5 +61,11 @@ for _, lsp in ipairs(servers) do
         capabilities = M.capabilities,
     })
 end
+
+-- Разобраться с GraphQL
+lspconfig.graphql.setup({
+    on_attach = M.on_attach,
+    capabilities = M.capabilities,
+})
 
 return M

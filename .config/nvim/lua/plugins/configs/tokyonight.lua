@@ -16,6 +16,9 @@ tokyonight.setup({
         hl.DiagnosticVirtualTextInfo = { bg = 'NONE', fg = c.blue2 }
         hl.DiagnosticVirtualTextHint = { bg = 'NONE', fg = c.teal }
         hl.LspSagaFinderSelection = { fg = c.red }
+        hl.NvimTreeNormal = { bg = 'NONE' }
+        hl.NvimTreeNormalNC = { bg = 'NONE' }
+        hl.LineNr = { fg = c.fg_dark }
     end,
 })
 

@@ -20,13 +20,6 @@ if present then
         use { 'ii14/neorepl.nvim' }
 
         use {
-            'xiyaowong/nvim-transparent',
-            config = function()
-                require('plugins.configs.transparent')
-            end,
-        }
-
-        use {
             'kyazdani42/nvim-web-devicons',
             config = function()
                 require('nvim-web-devicons').setup({
@@ -96,6 +89,14 @@ if present then
             after = 'tokyonight.nvim',
             config = function()
                 require('plugins.configs.lualine')
+            end,
+        }
+
+        use {
+            'xiyaowong/nvim-transparent',
+            after = 'tokyonight.nvim',
+            config = function()
+                require('plugins.configs.transparent')
             end,
         }
 
@@ -204,6 +205,13 @@ if present then
         use {
             'nvim-telescope/telescope-fzf-native.nvim',
             run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
+        }
+
+        use {
+            'nvim-tree/nvim-tree.lua',
+            config = function()
+                require('plugins.configs.nvim-tree')
+            end,
         }
     end)
 end

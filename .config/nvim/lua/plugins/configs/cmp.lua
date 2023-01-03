@@ -43,13 +43,12 @@ local options = {
             require('luasnip').lsp_expand(args.body)
         end,
     },
-    -- formatting = {
-    --     format = function(_, vim_item)
-    --         local icons = require('nvchad_ui.icons').lspkind
-    --         vim_item.kind = string.format('%s %s', icons[vim_item.kind], vim_item.kind)
-    --         return vim_item
-    --     end,
-    -- },
+    formatting = {
+        format = function(entry, vim_item)
+            vim_item.abbr = string.sub(vim_item.abbr, 1, 60)
+            return vim_item
+        end,
+    },
     mapping = {
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-n>'] = cmp.mapping.select_next_item(),

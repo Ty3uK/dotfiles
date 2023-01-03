@@ -7,7 +7,16 @@ end
 
 rust.setup({
     server = {
+        standalone = false,
         on_attach = function()
         end,
+        settings = {
+            ["rust-analyzer"] = {
+                checkOnSave = {
+                    command = "clippy",
+                },
+                inlayHints = { locationLinks = false },
+            },
+        },
     },
 })
