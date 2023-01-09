@@ -1,10 +1,4 @@
-local present, blankline = pcall(require, 'indent_blankline')
-
-if not present then
-    return
-end
-
-blankline.setup({
+require("indent_blankline").setup({
     indentLine_enabled = 1,
     filetype_exclude = {
         'help',
