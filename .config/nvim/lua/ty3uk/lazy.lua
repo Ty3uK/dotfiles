@@ -12,7 +12,6 @@ require("lazy").setup({
     { "nvim-tree/nvim-web-devicons" },
     { "akinsho/bufferline.nvim" },
     { "nvim-lualine/lualine.nvim" },
-    { "nvim-tree/nvim-tree.lua" },
 
     -- Generic
     { "lukas-reineke/indent-blankline.nvim" },
@@ -28,6 +27,7 @@ require("lazy").setup({
     { "neovim/nvim-lspconfig" },
     { "glepnir/lspsaga.nvim" },
     { "simrat39/rust-tools.nvim" },
+    { "jose-elias-alvarez/null-ls.nvim" },
 
     -- Cmp
     { "rafamadriz/friendly-snippets", event = "InsertEnter" },
@@ -40,13 +40,11 @@ require("lazy").setup({
     { "hrsh7th/cmp-path" },
     { "windwp/nvim-autopairs" },
 
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-    },
+    -- TreeSitter
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
-    {
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.0",
-    },
+    -- Telescope
+    { "nvim-telescope/telescope.nvim", tag = "0.1.0" },
+    { "nvim-telescope/telescope-file-browser.nvim" },
+    { "debugloop/telescope-undo.nvim" },
 })

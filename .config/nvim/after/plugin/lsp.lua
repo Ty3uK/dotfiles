@@ -2,11 +2,32 @@ local lspconfig = require("lspconfig")
 
 require("mason").setup()
 require("mason-lspconfig").setup()
-require("lspsaga").init_lsp_saga({
-    border_style = "rounded",
+require("lspsaga").setup({
+    ui = {
+        theme = "round",
+        border = "rounded",
+        title = false,
+        colors = {
+          normal_bg = "NONE",
+          title_bg = "NONE",
+          red = "NONE",
+          magenta = "NONE",
+          orange = "NONE",
+          yellow = "NONE",
+          green = "NONE",
+          cyan = "NONE",
+          blue = "NONE",
+          purple = "NONE",
+          white = "NONE",
+          black = "NONE",
+        },
+    },
     scroll_in_preview = {
         scroll_down = "<C-d>",
         scroll_up = "<C-u>",
+    },
+    symbol_in_winbar = {
+        enable = false,
     },
 })
 
@@ -42,16 +63,17 @@ lspconfig.sumneko_lua.setup {
 
     settings = {
         Lua = {
+            runtime = {
+                version = 'LuaJIT',
+            },
             diagnostics = {
                 globals = { "vim" },
             },
             workspace = {
-                library = {
-                    [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-                    [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
-                },
-                maxPreload = 100000,
-                preloadFileSize = 10000,
+                library = vim.api.nvim_get_runtime_file("", true),
+            },
+            telemetry = {
+                enable = false,
             },
         },
     },

@@ -14,9 +14,8 @@ vim.keymap.set("i", "<C-l>", "<C-o>l", options)
 -- Telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", options)
 vim.keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", options)
-
--- File tree
-vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeFindFileToggle<cr>", options)
+vim.keymap.set("n", "<leader>p", "<cmd>Telescope file_browser path=%:p:h<cr>", options)
+vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>", options)
 
 -- Tabs
 vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", options)
@@ -28,11 +27,14 @@ vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<cr>", options)
 vim.keymap.set("n", "<leader>gd", "<cmd>Lspsaga lsp_finder<cr>", options)
 vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<cr>", options)
 vim.keymap.set("n", "<leader>f", "<cmd>Lspsaga show_line_diagnostics<cr>", options)
+vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, options)
 vim.keymap.set("n", "<leader>ra", "<cmd>Lspsaga rename<cr>", options)
 vim.keymap.set("n", "H", "<cmd>Lspsaga hover_doc<cr>", options)
 
 -- Git
 vim.keymap.set("n", "<leader>gt", "<cmd>LazyGit<cr>", options)
+vim.keymap.set("n", "<leader>gb", require("gitsigns").blame_line, options)
 
 -- Generic
+vim.keymap.set("n", "<leader>/", require("Comment.api").toggle.linewise.current, options)
 vim.keymap.set("v", "<leader>/", "<Esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", options)
