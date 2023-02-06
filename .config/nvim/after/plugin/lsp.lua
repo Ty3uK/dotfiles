@@ -89,7 +89,3 @@ require("rust-tools").setup({
         },
     },
 })
-
-require("sg").setup({
-    on_attach = on_attach,
-})
