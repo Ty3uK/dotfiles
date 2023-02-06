@@ -34,6 +34,7 @@ vim.keymap.set("n", "H", "<cmd>Lspsaga hover_doc<cr>", options)
 -- Git
 vim.keymap.set("n", "<leader>gt", "<cmd>LazyGit<cr>", options)
 vim.keymap.set("n", "<leader>gb", require("gitsigns").blame_line, options)
+vim.keymap.set("n", "<leader>gh", require("gitsigns").preview_hunk, options)
 
 -- Generic
 vim.keymap.set("n", "<leader>/", require("Comment.api").toggle.linewise.current, options)
