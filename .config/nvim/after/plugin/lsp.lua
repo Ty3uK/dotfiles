@@ -4,29 +4,16 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 require("lspsaga").setup({
     ui = {
-        theme = "round",
         border = "rounded",
-        title = false,
-        colors = {
-          normal_bg = "NONE",
-          title_bg = "NONE",
-          red = "NONE",
-          magenta = "NONE",
-          orange = "NONE",
-          yellow = "NONE",
-          green = "NONE",
-          cyan = "NONE",
-          blue = "NONE",
-          purple = "NONE",
-          white = "NONE",
-          black = "NONE",
-        },
     },
-    scroll_in_preview = {
+    scroll_preview = {
         scroll_down = "<C-d>",
         scroll_up = "<C-u>",
     },
     symbol_in_winbar = {
+        enable = false,
+    },
+    beacon = {
         enable = false,
     },
 })
@@ -101,4 +88,8 @@ require("rust-tools").setup({
             },
         },
     },
+})
+
+require("sg").setup({
+    on_attach = on_attach,
 })
