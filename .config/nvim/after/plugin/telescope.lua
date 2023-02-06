@@ -15,6 +15,18 @@ telescope.setup({
         },
         file_ignore_patterns = { "node_modules/", ".git/" },
     },
+    pickers = {
+        find_files = {
+            find_command = {
+                "fd",
+                "--type",
+                "f",
+                "--color",
+                "never",
+                "--hidden",
+            },
+        },
+    },
     extensions = {
         undo = {
             side_by_side = true,
