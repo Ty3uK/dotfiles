@@ -28,6 +28,13 @@ telescope.setup({
         },
     },
     extensions = {
+        file_browser = {
+            initial_mode = "normal",
+            file_ignore_patterns = {},
+            hidden = true,
+            respect_gitignore = false,
+            hijack_netrw = true,
+        },
         undo = {
             side_by_side = true,
             layout_strategy = "vertical",
