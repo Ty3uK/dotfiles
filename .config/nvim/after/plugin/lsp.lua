@@ -89,3 +89,28 @@ require("rust-tools").setup({
         },
     },
 })
+
+-- JSON + YAML LSP
+local schemastore = require("schemastore")
+
+lspconfig.jsonls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+        json = {
+            schemas = schemastore.json.schemas(),
+            validate = { enable = true },
+        },
+    },
+})
+
+lspconfig.yamlls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+        yaml = {
+            schemas = schemastore.yaml.schemas(),
+            validate = { enable = true },
+        },
+    },
+})

@@ -30,6 +30,7 @@ vim.keymap.set("n", "<leader>f", "<cmd>Lspsaga show_line_diagnostics<cr>", optio
 vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, options)
 vim.keymap.set("n", "<leader>ra", "<cmd>Lspsaga rename<cr>", options)
 vim.keymap.set("n", "H", "<cmd>Lspsaga hover_doc<cr>", options)
+vim.keymap.set("n", "<leader>d", "<cmd>TroubleToggle<cr>", options)
 
 -- Git
 vim.keymap.set("n", "<leader>gt", "<cmd>LazyGit<cr>", options)

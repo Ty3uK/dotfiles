@@ -28,6 +28,8 @@ require("lazy").setup({
     { "glepnir/lspsaga.nvim" },
     { "simrat39/rust-tools.nvim" },
     { "jose-elias-alvarez/null-ls.nvim" },
+    { "b0o/schemastore.nvim" },
+    { "folke/trouble.nvim" },
 
     -- Cmp
     { "rafamadriz/friendly-snippets", event = "InsertEnter" },
