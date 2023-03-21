@@ -10,6 +10,12 @@ local extra_groups = {
     "DiffChange",
     "DiffDelete",
     "DiffChangeDelete",
+    "NormalFloat",
+    "FloatBorder",
+    "FloatTitle",
+    "TelescopeBorder",
+    "Pmenu",
+    "TroubleNormal",
 }
 
 local lualine_lsp_groups = { "error", "warn", "hint", "info" }
@@ -21,6 +27,7 @@ for _, group in pairs(lualine_lsp_groups) do
 end
 
 require("transparent").setup({
-    enable = true,
     extra_groups = extra_groups,
 })
+
+vim.cmd(":TransparentEnable")
