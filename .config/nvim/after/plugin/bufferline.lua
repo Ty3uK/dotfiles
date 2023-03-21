@@ -5,12 +5,5 @@ require("bufferline").setup({
         indicator = {
             style = "none",
         },
-        offsets = {
-            {
-                filetype = "NvimTree",
-                text = "File Explorer",
-                highlight = "Directory",
-            }
-        },
     },
 })
