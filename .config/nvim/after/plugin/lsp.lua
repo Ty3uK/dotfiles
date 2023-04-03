@@ -16,6 +16,11 @@ require("lspsaga").setup({
     beacon = {
         enable = false,
     },
+    finder = {
+        keys = {
+            expand_or_jump = '<CR>',
+        },
+    },
 })
 
 -- export on_attach & capabilities for custom lspconfigs

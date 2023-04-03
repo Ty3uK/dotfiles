@@ -45,7 +45,7 @@ telescope.setup({
     },
 })
 
-local extensions = { "file_browser", "undo" }
+local extensions = { "file_browser", "undo", "package_info", "lazy" }
 for _, ext in pairs(extensions) do
     telescope.load_extension(ext)
 end

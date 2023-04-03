@@ -46,7 +46,11 @@ require("lazy").setup({
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
     -- Telescope
-    { "nvim-telescope/telescope.nvim", tag = "0.1.0" },
+    { "nvim-telescope/telescope.nvim", tag = "0.1.1" },
     { "nvim-telescope/telescope-file-browser.nvim" },
     { "debugloop/telescope-undo.nvim" },
+    { "tsakirist/telescope-lazy.nvim" },
+
+    -- Various
+    { "vuki656/package-info.nvim", dependencies = { "MunifTanjim/nui.nvim" } }
 })
