@@ -40,3 +40,9 @@ vim.keymap.set("n", "<leader>gh", require("gitsigns").preview_hunk, options)
 -- Generic
 vim.keymap.set("n", "<leader>/", require("Comment.api").toggle.linewise.current, options)
 vim.keymap.set("v", "<leader>/", "<Esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", options)
+
+-- Harpoon
+vim.keymap.set("n", "<leader>ha", require("harpoon.mark").add_file, options)
+vim.keymap.set("n", "<leader>he", require("harpoon.ui").toggle_quick_menu, options)
+vim.keymap.set("n", "<leader>hn", require("harpoon.ui").nav_next, options)
+vim.keymap.set("n", "<leader>hp", require("harpoon.ui").nav_prev, options)

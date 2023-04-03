@@ -52,5 +52,6 @@ require("lazy").setup({
     { "tsakirist/telescope-lazy.nvim" },
 
     -- Various
-    { "vuki656/package-info.nvim", dependencies = { "MunifTanjim/nui.nvim" } }
+    { "vuki656/package-info.nvim", dependencies = { "MunifTanjim/nui.nvim" } },
+    { "ThePrimeagen/harpoon" }
 })
