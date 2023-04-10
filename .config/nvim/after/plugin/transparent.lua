@@ -1,29 +1,18 @@
 local extra_groups = {
-    "lualine_c_normal",
-    "NvimTreeNormal",
-    "NvimTreeNormalNC",
-    "DiagnosticVirtualTextError",
-    "DiagnosticVirtualTextWarn",
-    "DiagnosticVirtualTextInfo",
-    "DiagnosticVirtualTextHint",
-    "DiffAdd",
-    "DiffChange",
-    "DiffDelete",
-    "DiffChangeDelete",
-    "NormalFloat",
-    "FloatBorder",
-    "FloatTitle",
-    "TelescopeBorder",
+    "BufferLineFill",
     "Pmenu",
-    "TroubleNormal",
 }
 
-local lualine_lsp_groups = { "error", "warn", "hint", "info" }
-local lualine_modes = { "normal", "insert", "command", "visual" }
-for _, group in pairs(lualine_lsp_groups) do
-   for _, mode in pairs(lualine_modes) do
-        table.insert(extra_groups, "lualine_y_diagnostics_" .. group .. "_" .. mode)
-   end
+-- lualine
+local modes = { "normal", "visual", "replace", "insert", "command" }
+for _, mode in ipairs(modes) do
+    table.insert(extra_groups, "lualine_c_" .. mode)
+end
+
+-- gitsigns
+local diff_mode = { "Add", "Change", "Delete", "ChangeDelete" }
+for _, mode in ipairs(diff_mode) do
+    table.insert(extra_groups, "Diff" .. mode)
 end
 
 require("transparent").setup({

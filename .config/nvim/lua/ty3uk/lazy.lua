@@ -1,11 +1,11 @@
 require("lazy").setup({
     { "nvim-lua/plenary.nvim" },
 
-	{
-		"folke/tokyonight.nvim",
+    {
+        "Mofiqul/vscode.nvim",
         lazy = false,
         priority = 1000,
-	},
+    },
 
     -- UI
     { "xiyaowong/nvim-transparent" },

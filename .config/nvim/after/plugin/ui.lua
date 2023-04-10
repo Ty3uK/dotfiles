@@ -1,11 +1,8 @@
-require("tokyonight").setup({
+local vscode = require("vscode")
+vscode.setup({
     transparent = true,
-    styles = {
-        floats = 'transparent',
-    },
 })
-
-vim.cmd[[colorscheme tokyonight]]
+vscode.load()
 
 local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 for type, icon in pairs(signs) do
