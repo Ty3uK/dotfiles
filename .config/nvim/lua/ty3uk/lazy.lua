@@ -25,11 +25,9 @@ require("lazy").setup({
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
     { "neovim/nvim-lspconfig" },
-    { "glepnir/lspsaga.nvim" },
     { "simrat39/rust-tools.nvim" },
     { "jose-elias-alvarez/null-ls.nvim" },
     { "b0o/schemastore.nvim" },
-    { "folke/trouble.nvim" },
 
     -- Cmp
     { "rafamadriz/friendly-snippets", event = "InsertEnter" },
@@ -50,6 +48,7 @@ require("lazy").setup({
     { "nvim-telescope/telescope-file-browser.nvim" },
     { "debugloop/telescope-undo.nvim" },
     { "tsakirist/telescope-lazy.nvim" },
+    { dir = "~/projects/lua/telescope-lsp-finder" },
 
     -- Various
     { "vuki656/package-info.nvim", dependencies = { "MunifTanjim/nui.nvim" } },

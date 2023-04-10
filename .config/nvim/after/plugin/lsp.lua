@@ -2,26 +2,6 @@ local lspconfig = require("lspconfig")
 
 require("mason").setup()
 require("mason-lspconfig").setup()
-require("lspsaga").setup({
-    ui = {
-        border = "rounded",
-    },
-    scroll_preview = {
-        scroll_down = "<C-d>",
-        scroll_up = "<C-u>",
-    },
-    symbol_in_winbar = {
-        enable = false,
-    },
-    beacon = {
-        enable = false,
-    },
-    finder = {
-        keys = {
-            expand_or_jump = '<CR>',
-        },
-    },
-})
 
 -- export on_attach & capabilities for custom lspconfigs
 local on_attach = function(client, bufnr)
@@ -49,14 +29,14 @@ capabilities.textDocument.completion.completionItem = {
     },
 }
 
-lspconfig.lua_ls.setup {
+lspconfig.lua_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
 
     settings = {
         Lua = {
             runtime = {
-                version = 'LuaJIT',
+                version = "LuaJIT",
             },
             diagnostics = {
                 globals = { "vim" },
@@ -69,7 +49,7 @@ lspconfig.lua_ls.setup {
             },
         },
     },
-}
+})
 
 local servers = { "gopls", "tsserver", "cssls", "graphql", "svelte" }
 
@@ -119,3 +99,11 @@ lspconfig.yamlls.setup({
         },
     },
 })
+
+-- To instead override globally
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+    opts = opts or {}
+    opts.border = "rounded"
+    return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end

@@ -23,14 +23,13 @@ vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", options)
 vim.keymap.set("n", "<leader>x", "<cmd>bdelete<cr>", options)
 
 -- LSP
-vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<cr>", options)
-vim.keymap.set("n", "<leader>gd", "<cmd>Lspsaga lsp_finder<cr>", options)
-vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<cr>", options)
-vim.keymap.set("n", "<leader>f", "<cmd>Lspsaga show_line_diagnostics<cr>", options)
+vim.keymap.set("n", "gd", "<cmd>Telescope lsp_finder<cr>", options)
+vim.keymap.set("n", "<leader>gd", "<cmd>Telescope lsp_finder<cr>", options)
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, options)
+vim.keymap.set("n", "<leader>f", vim.diagnostic.open_float, options)
 vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, options)
-vim.keymap.set("n", "<leader>ra", "<cmd>Lspsaga rename<cr>", options)
-vim.keymap.set("n", "H", "<cmd>Lspsaga hover_doc<cr>", options)
-vim.keymap.set("n", "<leader>d", "<cmd>TroubleToggle<cr>", options)
+vim.keymap.set("n", "<leader>ra", vim.lsp.buf.rename, options)
+vim.keymap.set("n", "H", vim.lsp.buf.hover, options)
 
 -- Git
 vim.keymap.set("n", "<leader>gt", "<cmd>LazyGit<cr>", options)
