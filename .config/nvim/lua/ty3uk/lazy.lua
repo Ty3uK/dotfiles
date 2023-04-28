@@ -28,6 +28,7 @@ require("lazy").setup({
     { "simrat39/rust-tools.nvim" },
     { "jose-elias-alvarez/null-ls.nvim" },
     { "b0o/schemastore.nvim" },
+    { "danymat/neogen", dependencies = "nvim-treesitter/nvim-treesitter", config = true },
 
     -- Cmp
     { "rafamadriz/friendly-snippets", event = "InsertEnter" },
@@ -52,5 +53,6 @@ require("lazy").setup({
 
     -- Various
     { "vuki656/package-info.nvim", dependencies = { "MunifTanjim/nui.nvim" } },
-    { "ThePrimeagen/harpoon" }
+    { "ThePrimeagen/harpoon" },
+    { "ellisonleao/carbon-now.nvim" }
 })
