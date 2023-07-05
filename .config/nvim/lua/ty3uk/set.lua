@@ -1,5 +1,5 @@
 -- Leader
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- Indenting
 vim.opt.expandtab = true
@@ -15,9 +15,9 @@ vim.opt.numberwidth = 2
 vim.opt.ruler = false
 
 vim.opt.scrolloff = 8
-vim.opt.mouse = ''
+vim.opt.mouse = ""
 
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.termguicolors = true
@@ -26,7 +26,7 @@ vim.opt.undofile = true
 vim.opt.updatetime = 250
 
 -- disable nvim intro
-vim.opt.shortmess:append 'sI'
+vim.opt.shortmess:append("sI")
 
 vim.g.markdown_fenced_languages = {
     "ts=typescript",
