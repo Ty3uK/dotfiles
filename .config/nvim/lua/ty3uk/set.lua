@@ -27,3 +27,7 @@ vim.opt.updatetime = 250
 
 -- disable nvim intro
 vim.opt.shortmess:append 'sI'
+
+vim.g.markdown_fenced_languages = {
+    "ts=typescript",
+}
