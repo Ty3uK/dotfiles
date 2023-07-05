@@ -44,6 +44,7 @@ require("lazy").setup({
 
     -- TreeSitter
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+    { "nvim-treesitter/nvim-treesitter-context" },
 
     -- Telescope
     { "nvim-telescope/telescope.nvim", tag = "0.1.1" },
