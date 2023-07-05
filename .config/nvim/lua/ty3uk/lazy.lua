@@ -53,7 +53,6 @@ require("lazy").setup({
     { dir = "~/projects/lua/telescope-lsp-finder" },
 
     -- Various
-    { "vuki656/package-info.nvim", dependencies = { "MunifTanjim/nui.nvim" } },
     { "ThePrimeagen/harpoon" },
     { "narutoxy/silicon.lua", dependencies = { "nvim-lua/plenary.nvim" } },
 })
