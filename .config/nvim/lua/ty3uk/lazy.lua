@@ -29,6 +29,7 @@ require("lazy").setup({
     { "jose-elias-alvarez/null-ls.nvim" },
     { "b0o/schemastore.nvim" },
     { "danymat/neogen", dependencies = "nvim-treesitter/nvim-treesitter", config = true },
+    { "pmizio/typescript-tools.nvim" },
 
     -- Cmp
     { "rafamadriz/friendly-snippets", event = "InsertEnter" },
