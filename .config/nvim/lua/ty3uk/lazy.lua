@@ -54,5 +54,5 @@ require("lazy").setup({
     -- Various
     { "vuki656/package-info.nvim", dependencies = { "MunifTanjim/nui.nvim" } },
     { "ThePrimeagen/harpoon" },
-    { "ellisonleao/carbon-now.nvim" }
+    { "narutoxy/silicon.lua", dependencies = { "nvim-lua/plenary.nvim" } },
 })
