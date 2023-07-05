@@ -14,7 +14,7 @@ vim.keymap.set("i", "<C-l>", "<C-o>l", options)
 -- Telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", options)
 vim.keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", options)
-vim.keymap.set("n", "<leader>p", "<cmd>Telescope file_browser path=%:p:h<cr>", options)
+vim.keymap.set("n", "<leader>p", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", options)
 vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>", options)
 
 -- Tabs

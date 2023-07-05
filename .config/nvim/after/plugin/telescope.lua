@@ -1,4 +1,4 @@
-local telescope = require("telescope");
+local telescope = require("telescope")
 
 telescope.setup({
     defaults = {
@@ -45,7 +45,7 @@ telescope.setup({
     },
 })
 
-local extensions = { "file_browser", "undo", "package_info", "lazy", "lsp_finder" }
+local extensions = { "file_browser", "undo", "lazy", "lsp_finder", "file_browser" }
 for _, ext in pairs(extensions) do
     telescope.load_extension(ext)
 end

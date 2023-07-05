@@ -47,10 +47,13 @@ require("lazy").setup({
 
     -- Telescope
     { "nvim-telescope/telescope.nvim", tag = "0.1.1" },
-    { "nvim-telescope/telescope-file-browser.nvim" },
     { "debugloop/telescope-undo.nvim" },
     { "tsakirist/telescope-lazy.nvim" },
     { dir = "~/projects/lua/telescope-lsp-finder" },
+    {
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    },
 
     -- Various
     { "ThePrimeagen/harpoon" },
