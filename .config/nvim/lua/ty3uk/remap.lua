@@ -17,11 +17,6 @@ vim.keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", options)
 vim.keymap.set("n", "<leader>p", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", options)
 vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>", options)
 
--- Tabs
-vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", options)
-vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", options)
-vim.keymap.set("n", "<leader>x", "<cmd>bdelete<cr>", options)
-
 -- LSP
 vim.keymap.set("n", "gd", "<cmd>Telescope lsp_finder<cr>", options)
 vim.keymap.set("n", "<leader>gd", "<cmd>Telescope lsp_finder<cr>", options)
@@ -47,6 +42,6 @@ vim.keymap.set(
 
 -- Harpoon
 vim.keymap.set("n", "<leader>ha", require("harpoon.mark").add_file, options)
-vim.keymap.set("n", "<leader>he", require("harpoon.ui").toggle_quick_menu, options)
+vim.keymap.set("n", "<leader>he", require("telescope").extensions.harpoon.marks, options)
 vim.keymap.set("n", "<leader>hn", require("harpoon.ui").nav_next, options)
 vim.keymap.set("n", "<leader>hp", require("harpoon.ui").nav_prev, options)

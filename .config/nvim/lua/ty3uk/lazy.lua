@@ -10,7 +10,6 @@ require("lazy").setup({
     -- UI
     { "xiyaowong/nvim-transparent" },
     { "nvim-tree/nvim-web-devicons" },
-    { "akinsho/bufferline.nvim" },
     { "nvim-lualine/lualine.nvim" },
 
     -- Generic
