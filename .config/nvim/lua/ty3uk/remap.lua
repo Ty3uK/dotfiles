@@ -45,3 +45,7 @@ vim.keymap.set("n", "<leader>ha", require("harpoon.mark").add_file, options)
 vim.keymap.set("n", "<leader>he", require("telescope").extensions.harpoon.marks, options)
 vim.keymap.set("n", "<leader>hn", require("harpoon.ui").nav_next, options)
 vim.keymap.set("n", "<leader>hp", require("harpoon.ui").nav_prev, options)
+vim.keymap.set("n", "<leader>hb", "<cmd>Telescope buffers<cr>", options)
+
+-- Obsidian
+vim.keymap.set("n", "<leader>op", "<cmd>ObsidianSearch<cr>", options)
