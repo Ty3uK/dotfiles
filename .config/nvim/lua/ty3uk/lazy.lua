@@ -59,6 +59,7 @@ require("lazy").setup({
     { "ThePrimeagen/harpoon" },
     { "narutoxy/silicon.lua", dependencies = { "nvim-lua/plenary.nvim" } },
     { "epwalsh/obsidian.nvim" },
+    { "ellisonleao/glow.nvim" },
 }, {
     ui = {
         border = "rounded",
