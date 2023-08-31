@@ -47,6 +47,9 @@ require("mason-lspconfig").setup_handlers({
                 standalone = false,
                 settings = {
                     ["rust-analyzer"] = {
+                        cargo = {
+                            features = "all",
+                        },
                         checkOnSave = {
                             command = "clippy",
                         },
