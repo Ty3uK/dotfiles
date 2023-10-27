@@ -1,5 +1,4 @@
 local lspconfig = require("lspconfig")
-
 require("mason").setup({ ui = { border = "rounded" } })
 require("mason-lspconfig").setup()
 
@@ -49,6 +48,9 @@ require("mason-lspconfig").setup_handlers({
                     ["rust-analyzer"] = {
                         cargo = {
                             features = "all",
+                            buildScripts = {
+                                enable = true,
+                            },
                         },
                         checkOnSave = {
                             command = "clippy",
@@ -112,9 +114,18 @@ require("mason-lspconfig").setup_handlers({
             root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
         })
     end,
+    ["sqlls"] = function()
+        lspconfig.sqlls.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+            cmd = { "node", "/Users/ty3uk/projects/js/sql-language-server/packages/server/dist/bin/cli.js", "up", "--method", "stdio", "--debug" }
+        })
+    end,
 })
 
-require("typescript-tools").setup({})
+require("typescript-tools").setup({
+    on_attach = on_attach,
+})
 
 local win_config = { border = "rounded" }
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, win_config)

@@ -13,12 +13,11 @@ vim.keymap.set("i", "<C-l>", "<C-o>l", options)
 
 -- Telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", options)
-vim.keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", options)
-vim.keymap.set("n", "<leader>p", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", options)
-vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>", options)
+vim.keymap.set("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", options)
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", options)
+vim.keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>", options)
 
 -- LSP
-vim.keymap.set("n", "gd", "<cmd>Telescope lsp_finder<cr>", options)
 vim.keymap.set("n", "<leader>gd", "<cmd>Telescope lsp_finder<cr>", options)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, options)
 vim.keymap.set("n", "<leader>f", vim.diagnostic.open_float, options)
@@ -46,6 +45,3 @@ vim.keymap.set("n", "<leader>he", require("telescope").extensions.harpoon.marks,
 vim.keymap.set("n", "<leader>hn", require("harpoon.ui").nav_next, options)
 vim.keymap.set("n", "<leader>hp", require("harpoon.ui").nav_prev, options)
 vim.keymap.set("n", "<leader>hb", "<cmd>Telescope buffers<cr>", options)
-
--- Obsidian
-vim.keymap.set("n", "<leader>op", "<cmd>ObsidianSearch<cr>", options)

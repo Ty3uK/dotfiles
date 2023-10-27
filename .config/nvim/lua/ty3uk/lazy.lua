@@ -46,7 +46,7 @@ require("lazy").setup({
     { "nvim-treesitter/nvim-treesitter-context" },
 
     -- Telescope
-    { "nvim-telescope/telescope.nvim", tag = "0.1.1" },
+    { "nvim-telescope/telescope.nvim", tag = "0.1.3" },
     { "debugloop/telescope-undo.nvim" },
     { "tsakirist/telescope-lazy.nvim" },
     { dir = "~/projects/lua/telescope-lsp-finder" },
@@ -58,7 +58,6 @@ require("lazy").setup({
     -- Various
     { "ThePrimeagen/harpoon" },
     { "narutoxy/silicon.lua", dependencies = { "nvim-lua/plenary.nvim" } },
-    { "epwalsh/obsidian.nvim" },
     { "ellisonleao/glow.nvim" },
 }, {
     ui = {
