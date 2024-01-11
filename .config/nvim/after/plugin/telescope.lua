@@ -18,12 +18,11 @@ telescope.setup({
     pickers = {
         find_files = {
             find_command = {
-                "fd",
-                "--type",
-                "f",
-                "--color",
-                "never",
+                "rg",
+                "--files",
                 "--hidden",
+                "--glob",
+                "!**/.git/"
             },
         },
     },
@@ -45,7 +44,7 @@ telescope.setup({
     },
 })
 
-local extensions = { "file_browser", "undo", "lazy", "lsp_finder", "file_browser" }
+local extensions = { "file_browser", "undo", "lazy" }
 for _, ext in pairs(extensions) do
     telescope.load_extension(ext)
 end

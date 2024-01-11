@@ -48,7 +48,6 @@ require("lazy").setup({
     { "nvim-telescope/telescope.nvim", tag = "0.1.3" },
     { "debugloop/telescope-undo.nvim" },
     { "tsakirist/telescope-lazy.nvim" },
-    { dir = "~/projects/lua/telescope-lsp-finder" },
     {
         "nvim-telescope/telescope-file-browser.nvim",
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
