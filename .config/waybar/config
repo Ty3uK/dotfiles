@@ -1,0 +1,48 @@
+{
+    "modules-left": ["hyprland/workspaces", "mpris"],
+    "modules-right": ["group/misc", "cpu", "memory", "clock"],
+    "hyprland/workspaces": {
+        "format": "{id}"
+    },
+    "mpris": {
+        "format": "{title} - {artist}",
+        "title-len": 40,
+        "tooltip-format": "{title}\n{artist}\n{album}\n{position} | {length}"
+    },
+    "group/misc": {
+        "modules": ["hyprland/language", "battery", "network"],
+        "orientation": "horizontal"
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "🇺🇸",
+        "format-ru": "🇷🇺"
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰈂",
+        "tooltip-format-wifi": "{ifname}\n{essid}\n{ipaddr}",
+        "tooltip-format-ethernet": "{ifname}\n{ipaddr}",
+        "on-click": "nm-connection-editor"
+    },
+    "battery": {
+        "bat": "macsmc-battery",
+        "adapter": "macsmc-ac",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "Capacity:     {capacity}%\nTime to full: {time}"
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%"
+    },
+    "memory": {
+        "interval": 30,
+        "format": "  {used:0.1f}G/{total:0.1f}G",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%a %d. %b %I:%M%p}"
+    }
+}
