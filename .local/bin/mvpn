@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+ITEM="Citilink Dev"
+USERNAME="karelov.m"
+PASSWORD=$(rbw get "$ITEM" --field=password)
+TOTP=$(rbw get "$ITEM" --field=totp)
+URL=$(rbw get "$ITEM" --field="VPN URL")
+
+sudo CISCO_SPLIT_DNS="~." openconnect \
+    --useragent="AnyConnect" \
+    --form-entry="main:username=$USERNAME" \
+    --form-entry="main:password=$PASSWORD" \
+    --form-entry="main:secondary_password=$TOTP" \
+    "$URL"
