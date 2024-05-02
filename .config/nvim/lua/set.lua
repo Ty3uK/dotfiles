@@ -8,6 +8,15 @@ vim.opt.smartindent = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+    pattern = { "*.json", "*.yml", "*.yaml", "*.toml", "*.html" },
+    callback = function()
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.tabstop = 2
+        vim.opt_local.softtabstop = 2
+    end,
+})
+
 -- Numbers
 vim.opt.relativenumber = true
 vim.opt.number = true
@@ -25,9 +34,9 @@ vim.opt.timeoutlen = 400
 vim.opt.undofile = true
 vim.opt.updatetime = 250
 
--- disable nvim intro
-vim.opt.shortmess:append("sI")
-
 vim.g.markdown_fenced_languages = {
     "ts=typescript",
 }
+
+vim.g.netrw_bufsettings = "noma nomod nu rnu nobl nowrap ro"
+vim.g.netrw_localrmdir = "rm -rf"
