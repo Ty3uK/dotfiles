@@ -1,0 +1,86 @@
+brew "aria2"
+brew "asimov"
+brew "asitop"
+brew "bat"
+brew "eza"
+brew "fd"
+brew "ffmpeg"
+brew "fnm"
+brew "fx"
+brew "fzf"
+brew "git"
+brew "git-lfs"
+brew "gnu-sed"
+brew "git-delta"
+brew "go"
+brew "htop"
+brew "hyperfine"
+brew "inetutils"
+brew "jq"
+brew "k6"
+brew "lazygit"
+brew "lf"
+brew "neovim"
+brew "mas"
+brew "m-cli"
+brew "mediainfo"
+brew "openconnect"
+brew "pinentry"
+brew "procs"
+# brew "rbw"
+brew "reattach-to-user-namespace"
+brew "ripgrep"
+brew "rustup"
+brew "sqlite"
+brew "starship"
+brew "tldr"
+brew "tmux"
+brew "wget"
+brew "yt-dlp"
+brew "iperf"
+brew "websocat"
+brew "pinentry-mac"
+
+brew "oven-sh/bun/bun"
+brew "koekeishiya/homebrew-formulae/skhd"
+brew "koekeishiya/homebrew-formulae/yabai"
+
+tap "homebrew/cask-fonts"
+cask "font-fira-code", greedy: true
+cask "font-fira-code-nerd-font", greedy: true
+
+cask "adguard", greedy: true
+cask "adguard-vpn", greedy: true
+cask "alex313031-thorium", greedy: true
+cask "balenaetcher", greedy: true
+cask "boop", greedy: true
+cask "cleanmymac", greedy: true
+cask "firefox", greedy: true
+cask "handbrake", greedy: true
+cask "hex-fiend", greedy: true
+cask "imageoptim", greedy: true
+cask "imazing", greedy: true
+cask "insomnia", greedy: true
+cask "karabiner-elements", greedy: true
+cask "keka", greedy: true
+cask "kitty", greedy: true
+cask "kreya", greedy: true
+cask "ngrok", greedy: true
+cask "obsidian", greedy: true
+cask "orbstack", greedy: true
+cask "outline-manager", greedy: true
+cask "stolendata-mpv", greedy: true
+cask "qbittorrent", greedy: true
+cask "raycast", greedy: true
+cask "readdle-spark", greedy: true
+cask "spotify", greedy: true
+cask "telegram", greedy: true
+cask "ticktick", greedy: true
+cask "utm", greedy: true
+cask "visual-studio-code", greedy: true
+cask "zoom", greedy: true
+
+mas "Bitwarden", id: 1352778147
+mas "Outline", id: 1356178125
+mas "Telegram", id: 747648890
+mas "Pixelmator", id: 1289583905
