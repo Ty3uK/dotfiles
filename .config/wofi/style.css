@@ -1,0 +1,14 @@
+#window {
+    background: transparent;
+}
+
+
+#inner-box {
+    border: 1px solid @unfocused_borders;
+    border-radius: 5px;
+    background: @theme_bg_color;
+}
+
+#input {
+    margin-bottom: 10px;
+}

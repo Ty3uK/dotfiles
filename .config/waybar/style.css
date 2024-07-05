@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Fira Code Nerd Font;
+    font-family: Noto Sans, Symbols Nerd Font Mono;
     font-size: 15px;
     min-height: 0;
     margin: 0;
@@ -20,9 +20,9 @@ window > box {
 #workspaces,
 #mpris,
 #misc,
-#cpu,
-#memory,
-#clock
+#stats,
+#clock,
+#custom-power
 {
     padding: 0 15px;
     border-radius: 5px;
@@ -31,13 +31,14 @@ window > box {
 
 #workspaces,
 #misc,
-#cpu,
-#memory {
+#stats,
+#cpu {
     margin-right: 10px;
 }
 
 #language,
-#battery {
+#battery,
+#network {
     margin-right: 15px;
 }
 
@@ -52,11 +53,9 @@ window > box {
     border-bottom: 3px solid transparent;
 }
 
-#workspaces button.active {
+#workspaces button.focused {
     border-bottom: 3px solid white;
 }
-
-#network,
-#battery {
-    padding-right: 0.5em;
+ #language {
+    font-family: Noto Color Emoji;
 }
