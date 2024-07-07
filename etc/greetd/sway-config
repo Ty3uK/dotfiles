@@ -1,0 +1,6 @@
+exec "gtkgreet -l; swaymsg exit"
+
+output eDP-1 scale 1
+output DP-1 scale 1
+
+include /etc/sway/config.d/*
