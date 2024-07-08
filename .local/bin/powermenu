@@ -1,0 +1,21 @@
+#!/bin/bash
+
+ENTRIES="󰐥\tShutdown\n󰜉\tReboot\n󰒲\tSuspend\n󰌾\tLock\n󰍃\tLogout"
+PICKED_ENTRY=$(echo -e $ENTRIES | wofi -d -i)
+
+if [ -z "$PICKED_ENTRY" ]; then
+    exit 0
+fi
+
+case "$PICKED_ENTRY" in
+    *Shutdown*)
+        systemctl poweroff;;
+    *Reboot*)
+        systemctl reboot;;
+    *Suspend*)
+        systemctl suspend;;
+    *Lock*)
+        loginctl lock-session;;
+    *Logout*)
+        loginctl terminate-session $(loginctl session-status | head -n 1 | awk '{print $1}');;
+esac
