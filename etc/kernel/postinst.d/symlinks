@@ -1,0 +1,11 @@
+#!/bin/bash
+
+KERNEL_VERSION="$1"
+KERNEL_IMAGE="$2"
+
+ln -sf $KERNEL_IMAGE /boot/vmlinuz
+ln -sf /boot/initramfs-$KERNEL_VERSION.img /boot/initramfs.img
+
+# run after copying to `/etc/kernel`
+#
+# sudo kernel-install add-all
