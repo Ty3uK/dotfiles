@@ -31,7 +31,8 @@ input * {
     xkb_options "grp:caps_toggle"
 }
 
-bindsym $mod+Shift+q kill
+# bindsym $mod+Shift+q kill
+bindsym $mod+Shift+q exec "swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .pid' | xargs kill"
 bindsym $mod+shift+g exec $menu
 floating_modifier $mod normal
 bindsym $mod+Shift+c exec "swaymsg reload && kanshictl reload"
