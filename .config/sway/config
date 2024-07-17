@@ -11,8 +11,7 @@ set $menu wofi --show=drun -a -i
 #
 # Outputs:
 #
-output eDP-1 disable
-output DP-1 scale 1.3
+exec kanshi
 
 #
 # Idle:
@@ -35,7 +34,7 @@ input * {
 bindsym $mod+Shift+q kill
 bindsym $mod+shift+g exec $menu
 floating_modifier $mod normal
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c exec "swaymsg reload && kanshictl reload"
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 #
