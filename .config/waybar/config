@@ -1,5 +1,5 @@
 {
-    "modules-left": ["sway/workspaces", "mpris"],
+    "modules-left": ["sway/workspaces", "hyprland/workspaces", "mpris"],
     "modules-center": ["clock"],
     "modules-right": ["group/misc", "group/stats", "custom/power"],
     "mpris": {
@@ -12,12 +12,17 @@
         "format": "{:%a %d. %b %I:%M%p}"
     },
     "group/misc": {
-        "modules": ["sway/language", "battery", "network", "wireplumber"],
+        "modules": ["sway/language", "hyprland/language", "battery", "network", "wireplumber"],
         "orientation": "horizontal"
     },
     "sway/language": {
         "format": "{flag}",
         "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "🇺🇸",
+        "format-ru": "🇷🇺"
     },
     "network": {
         "format-wifi": "<span size='large'></span>",
