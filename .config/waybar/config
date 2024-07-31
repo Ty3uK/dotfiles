@@ -3,8 +3,8 @@
     "modules-center": ["clock"],
     "modules-right": ["group/misc", "group/stats", "custom/power"],
     "mpris": {
-        "format-playing": "<span size='large'></span>  {title} - {artist}",
-        "format-paused": "<span size='large'></span>  {title} - {artist}",
+        "format-playing": "<span size='large'></span>  {title} - {artist}",
+        "format-paused": "<span size='large'></span>  {title} - {artist}",
         "title-len": 40,
         "tooltip-format": "{title}\n{artist}\n{album}\n{player}"
     },
@@ -48,7 +48,8 @@
     "memory": {
         "interval": 30,
         "format": "<span size='large'></span>  {percentage}%",
-        "tooltip": false
+        "tooltip": true,
+        "tooltip-format": "Memory: {used}/{total}GB\nSwap: {swapUsed}/{swapTotal}GB"
     },
     "group/stats": {
         "modules": ["cpu", "memory"],
