@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export GTK_THEME=Adwaita:dark
+
+dbus-run-session Hyprland
+dbus-update-activation-environment --systemd --all
