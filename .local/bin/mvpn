@@ -5,10 +5,11 @@ USERNAME="karelov.m"
 PASSWORD=$(rbw get "$ITEM" --field=password)
 TOTP=$(rbw get "$ITEM" --field=totp)
 URL=$(rbw get "$ITEM" --field="VPN URL")
+SPLIT_DNS=$(rbw get "$ITEM" --field="SPLIT DNS")
 
-sudo CISCO_SPLIT_DNS="~." openconnect \
+sudo CISCO_SPLIT_DNS="$SPLIT_DNS" openconnect \
     --useragent="AnyConnect" \
     --form-entry="main:username=$USERNAME" \
-    --form-entry="main:password=$PASSWORD" \
-    --form-entry="main:secondary_password=$TOTP" \
+    --form-entry="main:password=$TOTP" \
+    --form-entry="main:secondary_password=$PASSWORD" \
     "$URL"

@@ -1,8 +1,7 @@
 profile External {
     output eDP-1 disable
-    output HDMI-A-1 {
+    output DP-1 {
         enable
-        mode 3600x2400
         scale 1.333333
         position 0,0
     }
@@ -11,7 +10,6 @@ profile External {
 profile Internal {
     output eDP-1 {
         enable
-        scale 1.8
         position 0,0
     }
 }
