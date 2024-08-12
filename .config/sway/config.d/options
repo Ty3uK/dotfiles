@@ -1,0 +1,5 @@
+xwayland disable
+
+bar {
+    swaybar_command waybar
+}
