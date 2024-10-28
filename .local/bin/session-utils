@@ -1,15 +1,11 @@
 #!/bin/sh
 
-WOBSOCK=$XDG_RUNTIME_DIR/wob
+WOBSOCK=$XDG_RUNTIME_DIR/wob.sock
 
 case "$1" in
     "startup")
         /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-        pipewire &
-        pipewire-pulse &
-        wireplumber &
-        kanshi &
-        mako &
+        (pkill mako && mako) &
         rm -rf $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob &
         ;;
     "volume")

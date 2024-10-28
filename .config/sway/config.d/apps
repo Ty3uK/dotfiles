@@ -1,0 +1,3 @@
+assign [app_id="kitty"] workspace 1
+assign [app_id="firefox"] workspace 2
+assign [app_id="org.telegram.desktop"] workspace 3

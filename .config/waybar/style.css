@@ -32,7 +32,8 @@ window > box {
 #workspaces,
 #misc,
 #stats,
-#cpu {
+#cpu,
+#clock {
     margin-right: 10px;
 }
 

@@ -9,11 +9,11 @@ fi
 
 case "$PICKED_ENTRY" in
     *Shutdown*)
-        loginctl poweroff;;
+        systemctl poweroff;;
     *Reboot*)
-        loginctl reboot;;
+        systemctl reboot;;
     *Suspend*)
-        loginctl suspend;;
+        systemctl suspend;;
     *Lock*)
         loginctl lock-session;;
     *Logout*)

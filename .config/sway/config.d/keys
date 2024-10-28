@@ -5,13 +5,13 @@ bindsym $mod+Shift+g exec rofi -show drun -a -i
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+Backspace exec swaymsg exit
-bindsym XF86AudioRaiseVolume exec session-utils volume up
-bindsym XF86AudioLowerVolume exec session-utils volume down
-bindsym XF86AudioMute exec session-utils volume mute
+bindsym XF86AudioRaiseVolume exec $HOME/.local/bin/session-utils volume up
+bindsym XF86AudioLowerVolume exec $HOME/.local/bin/session-utils volume down
+bindsym XF86AudioMute exec $HOME/.local/bin/session-utils volume mute
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-bindsym $mod+Shift+o exec session-utils screenshot rect
+bindsym $mod+Shift+o exec $HOME/.local/bin/session-utils screenshot rect
 bindsym $mod+Shift+p exec rofi-rbw
 
 bindsym $mod+h focus left
