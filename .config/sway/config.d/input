@@ -1,4 +1,0 @@
-input * {
-  xkb_layout "us,ru"
-  xkb_options "grp:caps_toggle"
-}

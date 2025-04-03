@@ -18,11 +18,13 @@ window > box {
 }
 
 #workspaces,
+#tags,
 #mpris,
 #misc,
 #stats,
 #clock,
-#custom-power
+#custom-power,
+#tray
 {
     padding: 0 15px;
     border-radius: 5px;
@@ -30,10 +32,13 @@ window > box {
 }
 
 #workspaces,
+#tags,
 #misc,
 #stats,
 #cpu,
-#clock {
+#memory,
+#clock,
+#tray {
     margin-right: 10px;
 }
 
@@ -43,11 +48,12 @@ window > box {
     margin-right: 15px;
 }
 
-#workspaces {
+#workspaces, #tags {
     padding: 0;
 }
 
-#workspaces button {
+#workspaces button,
+#tags button {
     padding: 5px 10px;
     background: transparent;
     color: white;
@@ -55,9 +61,11 @@ window > box {
 }
 
 #workspaces button.focused,
-#workspaces button.active {
+#workspaces button.active,
+#tags button.focused {
     border-bottom: 3px solid white;
 }
- #language {
+
+#language {
     font-family: Noto Color Emoji;
 }
