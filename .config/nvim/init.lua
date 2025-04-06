@@ -1,3 +1,4 @@
-require("set")
-require("plugins")
-require("remap")
+require("config.set")
+require("config.keys")
+require("config.lazy")
+require("config.lsp")

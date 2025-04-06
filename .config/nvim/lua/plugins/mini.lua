@@ -1,10 +1,16 @@
 return {
-    {
-        "echasnovski/mini.nvim",
-        version = false,
-        config = function()
-            require("mini.comment").setup()
-            require("mini.statusline").setup()
-        end,
-    },
+  {
+    'echasnovski/mini.nvim',
+    version = '*',
+    config = function()
+      require("mini.pairs").setup()
+      require("mini.statusline").setup()
+      require('mini.diff').setup({
+        view = {
+          style = "sign",
+        },
+      })
+      require('mini.trailspace').setup()
+    end,
+  },
 }
