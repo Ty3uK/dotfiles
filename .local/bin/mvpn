@@ -12,4 +12,5 @@ sudo CISCO_SPLIT_DNS="$SPLIT_DNS" openconnect \
     --form-entry="main:username=$USERNAME" \
     --form-entry="main:password=$TOTP" \
     --form-entry="main:secondary_password=$PASSWORD" \
+    --no-xmlpost \
     "$URL"
