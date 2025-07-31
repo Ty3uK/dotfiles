@@ -10,10 +10,27 @@ vim.keymap.set("i", "<C-l>", "<C-o>l")
 
 vim.keymap.set("n", "<esc>", "<cmd>:noh<cr>")
 
-vim.keymap.set("n", "<leader>gd", function() Snacks.picker.lsp_definitions() end)
-vim.keymap.set("n", "<leader>gr", function() Snacks.picker.lsp_references() end)
+vim.keymap.set("n", "<leader>gd", function()
+    Snacks.picker.lsp_definitions()
+end)
+vim.keymap.set("n", "<leader>gr", function()
+    Snacks.picker.lsp_references()
+end)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
-vim.keymap.set("n", "<leader>f", function() vim.diagnostic.open_float({ border = "rounded" }) end)
-vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>f", function()
+    vim.diagnostic.open_float({ border = "rounded" })
+end)
+vim.keymap.set("n", "<leader>fm", function()
+    vim.lsp.buf.format()
+    vim.lsp.buf.code_action({
+        context = {
+            only = { "source.fixAll.biome" },
+            diagnostics = {},
+        },
+        apply = true,
+    })
+end)
 vim.keymap.set("n", "<leader>ra", vim.lsp.buf.rename)
-vim.keymap.set("n", "H", function() vim.lsp.buf.hover({ border = "rounded" }) end)
+vim.keymap.set("n", "H", function()
+    vim.lsp.buf.hover({ border = "rounded" })
+end)

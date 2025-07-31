@@ -18,6 +18,7 @@ return {
                     { name = "nvim_lsp" },
                     { name = "buffer" },
                     { name = "path" },
+                    { name = "lazydev", group_index = 0 },
                 },
                 mapping = {
                     ["<C-p>"] = cmp.mapping.select_prev_item(),

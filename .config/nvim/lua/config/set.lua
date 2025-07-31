@@ -25,5 +25,9 @@ vim.opt.undofile = true
 vim.opt.updatetime = 250
 vim.opt.mouse = ""
 
+vim.cmd("set nobackup")
+vim.cmd("set nowritebackup")
+vim.cmd("set noswapfile")
+
 -- Lazy
 vim.g.snacks_animate = false
