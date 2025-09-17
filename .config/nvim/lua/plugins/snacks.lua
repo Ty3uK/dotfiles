@@ -4,9 +4,6 @@ return {
     opts = {
         picker = {
             enabled = true,
-            matcher = {
-                history_bonus = true,
-            },
         },
         indent = {
             enabled = true,
@@ -19,12 +16,6 @@ return {
         },
     },
     keys = {
-        {
-            "<leader>ff",
-            function()
-                Snacks.picker.files({ hidden = true })
-            end,
-        },
         {
             "<leader>lg",
             function()
