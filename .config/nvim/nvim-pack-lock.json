@@ -4,6 +4,14 @@
       "rev": "b19413d214068f316c78978b08264ed1c41830ec",
       "src": "https://github.com/saghen/blink.cmp"
     },
+    "conform.nvim": {
+      "rev": "c2526f1cde528a66e086ab1668e996d162c75f4f",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
+    "format-ts-errors.nvim": {
+      "rev": "4b7418d6689bc0fd3c1db0500c67133422522384",
+      "src": "https://github.com/davidosomething/format-ts-errors.nvim"
+    },
     "fzf-lua": {
       "rev": "3b4a5d13adeb33f387d744b6ed777bb5401cba94",
       "src": "https://github.com/ibhagwan/fzf-lua"
@@ -60,6 +68,10 @@
       "rev": "550197530c12b4838d685cf4e0d5eb4cca8d52c7",
       "src": "https://github.com/nvimtools/none-ls.nvim"
     },
+    "nvim-autopairs": {
+      "rev": "c2a0dd0d931d0fb07665e1fedb1ea688da3b80b4",
+      "src": "https://github.com/windwp/nvim-autopairs"
+    },
     "nvim-lint": {
       "rev": "a0718addcf9b5ba4325eb45441020bb824af9503",
       "src": "https://github.com/mfussenegger/nvim-lint.git"
@@ -72,13 +84,29 @@
       "rev": "42fc28ba918343ebfd5565147a42a26580579482",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
+    "nvim-treesitter-context": {
+      "rev": "64dd4cf3f6fd0ab17622c5ce15c91fc539c3f24a",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-context"
+    },
     "plenary.nvim": {
       "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
+    "render-markdown.nvim": {
+      "rev": "07d088bf8bdadd159eb807b90eaee86a4778383f",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+    },
     "snacks.nvim": {
       "rev": "836e07336ba523d4da480cd66f0241815393e98e",
       "src": "https://github.com/folke/snacks.nvim"
+    },
+    "typescript-tools.nvim": {
+      "rev": "c2f5910074103705661e9651aa841e0d7eea9932",
+      "src": "https://github.com/pmizio/typescript-tools.nvim"
+    },
+    "vim-alloy": {
+      "rev": "0273f88f7199189f9a0f32213a34ab778e226f86",
+      "src": "https://github.com/grafana/vim-alloy"
     },
     "yazi.nvim": {
       "rev": "9c22c9468e90af44b7f9fe62200f200c2937c366",
