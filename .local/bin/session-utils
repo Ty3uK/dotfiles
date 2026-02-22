@@ -1,0 +1,34 @@
+#!/bin/sh
+
+WOBSOCK=$XDG_RUNTIME_DIR/wob.sock
+
+case "$1" in
+    "startup")
+        /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+        (pkill mako && mako) &
+        rm -rf $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob &
+        ;;
+    "volume")
+        case "$2" in
+            "up")
+                (wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo 0 > $WOBSOCK) || (wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ && wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g' > $WOBSOCK)
+                ;;
+            "down")
+                (wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo 0 > $WOBSOCK) || (wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- && wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g' > $WOBSOCK)
+                ;;
+            "mute")
+                wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && (wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo 0 > $WOBSOCK) || wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g' > $WOBSOCK
+                ;;
+        esac
+        ;;
+    "screenshot")
+        case "$2" in
+            "rect")
+                grim -g "$(slurp)" - | swappy -f -
+                ;;
+        esac
+        ;;
+    *)
+        echo "No such script"
+        ;;
+esac
