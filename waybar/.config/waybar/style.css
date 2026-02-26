@@ -1,0 +1,27 @@
+window#waybar {
+    background: none;
+}
+
+#workspaces {
+    font-size: 18px;
+}
+
+#workspaces button.active {
+    color: #3daee9;
+    font-weight: bold;
+}
+
+#tray {
+    margin-right: 10px;
+}
+
+#workspaces, #clock, #language {
+    font-family: monospace;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#custom-power {
+    font-size: 24px;
+    margin-right: 10px;
+}
