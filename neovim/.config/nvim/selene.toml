@@ -1,5 +1,0 @@
-globals:
-  Snacks:
-    any: true
-  vim:
-    any: true
