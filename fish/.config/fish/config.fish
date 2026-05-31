@@ -1,3 +1,5 @@
+set fish_greeting
+
 # path
 fish_add_path $HOME/.local/bin
 
