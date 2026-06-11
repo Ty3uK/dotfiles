@@ -10,6 +10,9 @@ vim.pack.add({
     { src = 'https://github.com/kdheepak/lazygit.nvim' },
     { src = "https://github.com/romus204/tree-sitter-manager.nvim" },
     { src = "https://github.com/lewis6991/gitsigns.nvim" },
+    { src = 'https://github.com/saghen/blink.lib' },
+    { src = 'https://github.com/saghen/blink.cmp' },
+    { src = 'https://github.com/dmtrKovalenko/fff.nvim' }
 })
 
 vim.g.mapleader = " "
@@ -22,8 +25,6 @@ vim.o.expandtab = true
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
-
-vim.o.pumborder = "rounded"
 
 require("gruvbox").setup({
     terminal_colors = true,
@@ -46,21 +47,37 @@ require("mini.pick").setup({
 require("mini.statusline").setup()
 require("mini.pairs").setup()
 require("mini.icons").setup()
-MiniIcons.tweak_lsp_kind()
-require("mini.completion").setup({
-    window = {
-        info = { border = "rounded" },
-        signature = { border = "rounded" },
-    },
-    mappings = {
-        force_twostep = "<C-x><C-o>"
-    }
-})
-require("mini.cmdline").setup({
-    autocomplete = {
-        delay = 250,
+
+require('blink.cmp').setup({
+    keymap = {
+        preset = "default",
+        ["<C-x><C-o>"] = { function(cmp) cmp.show() end },
     },
 })
+
+vim.api.nvim_create_autocmd('PackChanged', {
+    callback = function(ev)
+        local name, kind = ev.data.spec.name, ev.data.kind
+        if kind ~= 'install' or kind ~= 'update' then
+            return
+        end
+        if name == 'fff.nvim' then
+            if not ev.data.active then
+                vim.cmd.packadd('fff.nvim')
+            end
+            require('fff.download').download_or_build_binary()
+        else
+            if name == 'blink.cmp' or name == 'blink.nvim' then
+                require('blink.cmp').build():pwait()
+            end
+        end
+    end,
+})
+
+vim.g.fff = {
+    lazy_sync = true,
+    debug = { enabled = true, show_scores = true },
+}
 
 require('yazi').setup({})
 require('tree-sitter-manager').setup({ auto_install = true })
@@ -95,8 +112,9 @@ vim.keymap.set("n", "<leader>dd", function() vim.diagnostic.setloclist() end, { 
 
 vim.keymap.set("n", "<leader>gt", function() require("lazygit").lazygit() end, { noremap = true })
 vim.keymap.set("n", "<leader>fb", function() require("yazi").yazi() end, { noremap = true })
-vim.keymap.set("n", "<leader>ff", function() MiniPick.registry.files() end, { noremap = true })
-vim.keymap.set("n", "<leader>fg", function() MiniPick.builtin.grep_live() end, { noremap = true })
+vim.keymap.set("n", "<leader>ff", function() require('fff').find_files() end, { noremap = true })
+vim.keymap.set("n", "<leader>fg", function() require('fff').live_grep() end,
+    { noremap = true })
 
 function Pack_clean()
     local active_plugins = {}
