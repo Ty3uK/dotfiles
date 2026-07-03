@@ -1,0 +1,5 @@
+inherits = "gruvbox"
+"ui.background" = {}
+"ui.help" = { fg = "fg1" }
+"ui.menu" = { fg = "fg1" }
+"ui.popup" = { fg = "fg1" }

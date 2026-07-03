@@ -1,0 +1,23 @@
+theme = "gruvbox_transparent"
+
+[editor]
+popup-border = "all"
+line-number = "relative"
+[editor.file-picker]
+hidden = false
+
+[keys.normal.space]
+g = [
+    ":write-all",
+    ":new",
+    ":insert-output lazygit",
+    ":buffer-close!",
+    ":redraw",
+    ":reload-all"
+]
+
+[keys.insert]
+C-h = "move_char_left"
+C-j = "move_line_down"
+C-k = "move_line_up"
+C-l = "move_char_right"

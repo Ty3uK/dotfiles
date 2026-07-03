@@ -1,0 +1,21 @@
+[[language]]
+name = "typescript"
+roots = ["package.json"]
+language-servers = [
+  { name = 'biome' },
+  { name = 'typescript-language-server', except-features = ['format'] }
+]
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "%{buffer_name}"] }
+
+[[language]]
+name = "tsx"
+roots = ["package.json"]
+language-servers = [
+  { name = 'biome' },
+  { name = 'typescript-language-server', except-features = ['format'] }
+]
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "%{buffer_name}"] }
+
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
