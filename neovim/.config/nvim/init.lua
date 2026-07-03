@@ -106,7 +106,9 @@ vim.keymap.set("i", "<C-k>", "<Up>", { noremap = true })
 vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true })
 
 vim.keymap.set("n", "grd", function() vim.lsp.buf.definition({ loclist = true }) end, { noremap = true })
-vim.keymap.set("n", "<leader>fm", function() vim.lsp.buf.format({ async = true }) end, { noremap = true })
+vim.keymap.set("n", "<leader>fm",
+    function() vim.lsp.buf.format({ async = true, filter = function(client) return client.name ~= "ts_ls" end }) end,
+    { noremap = true })
 vim.keymap.set("n", "<leader>df", function() vim.diagnostic.open_float() end, { noremap = true })
 vim.keymap.set("n", "<leader>dd", function() vim.diagnostic.setloclist() end, { noremap = true })
 
